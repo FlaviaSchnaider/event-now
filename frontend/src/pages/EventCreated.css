@@ -1,0 +1,71 @@
+.created-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f1a;
+  padding: 2rem;
+}
+
+.created-card {
+  background-color: #fff;
+  color: #333;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.created-card h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.created-card p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.link-box input {
+  padding: 0.6rem;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #333;
+}
+
+.link-box button {
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.vote-link {
+  background-color: #359776;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vote-link:hover {
+  background-color: #208666;
+}

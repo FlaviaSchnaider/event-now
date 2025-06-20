@@ -1,0 +1,50 @@
+.vote-page {
+  min-width: 800px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.vote-description {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.vote-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.vote-question {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vote-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vote-submit {
+  transition: background-color 0.3s;
+}
+
+.form-buttons
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

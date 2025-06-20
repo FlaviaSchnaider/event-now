@@ -85,9 +85,12 @@ export default function VotePage() {
           </div>
         </div>
       ))}
-      <div className="form-buttons">
+
+      <div className="vote-buttons">
         <button className="vote-submit" onClick={submit}>Enviar Votos</button>
-        <button onClick={() => navigate(`/event/${id}/results`)}>Ver Resultados</button>
+        <button className="vote-secondary" onClick={() => navigate(`/event/${id}/results`)}>
+          Ver Resultados
+        </button>
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ body, html {
 }
 
 button {
-  background-color: #624ba7;
+  background-color: #8d75d6;
   color: white;
   padding: 0.8rem 1.8rem;
   font-size: 1rem;
@@ -43,7 +43,12 @@ button {
 }
 
 button:hover {
-  background-color: #725daf;
+  background-color: #564788;
+  border: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 footer {

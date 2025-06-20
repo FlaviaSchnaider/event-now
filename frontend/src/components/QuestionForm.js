@@ -28,36 +28,60 @@ export default function QuestionForm({ question, index, onChange }) {
   };
 
   return (
-    <div className="question-box">
-      <p className='question'>Pergunta:</p>
-      <input
-        type="text"
-        placeholder="Faça sua pergunta"
-        value={localQuestion.text}
-        onChange={(e) => handleChange('text', e.target.value)}
-      />
-      <label className="checkbox-label">
-        <input
-          type="checkbox"
-          checked={localQuestion.multi}
-          onChange={(e) => handleChange('multi', e.target.checked)}
-        />
-        Permitir múltiplas respostas
-      </label>
-
-      {localQuestion.options.map((opt, i) => (
-        <input
-          key={i}
-          type="text"
-          placeholder={`Opção ${i + 1}`}
-          value={opt}
-          onChange={(e) => handleOptionChange(i, e.target.value)}
-        />
-      ))}
-      <div className="form-buttons">
-        <button onClick={addOption}>+ Opção</button>
-        <button onClick={removeOption}>Refazer Opção</button>
-      </div>
+  <div className="question-box">
+    <div className="question-label">
+      <span className="question-number">{index + 1}</span>
+      <span className="question-text">Pergunta:</span>
     </div>
-  );
+
+    <input
+      className="title-description"
+      type="text"
+      placeholder="Faça sua pergunta"
+      value={localQuestion.text}
+      onChange={(e) => handleChange('text', e.target.value)}
+    />
+
+    <label className="checkbox-label">
+      <input
+        type="checkbox"
+        checked={localQuestion.multi}
+        onChange={(e) => handleChange('multi', e.target.checked)}
+      />
+      Permitir múltiplas respostas
+    </label>
+
+    {localQuestion.options.map((opt, i) => (
+      <input
+        key={i}
+        className="title-description"
+        type="text"
+        placeholder={`Opção ${i + 1}`}
+        value={opt}
+        onChange={(e) => handleOptionChange(i, e.target.value)}
+      />
+    ))}
+
+    <div className="option-buttons">
+      <button
+        type="button"
+        className="btn-secondary"
+        onClick={addOption}
+      >
+        Adicionar Opção
+      </button>
+
+      {localQuestion.options.length > 1 && (
+        <button
+          type="button"
+          className="btn-secondary btn-remove"
+          onClick={removeOption}
+        >
+          Remover Opção
+        </button>
+      )}
+    </div>
+  </div>
+);
+
 }
